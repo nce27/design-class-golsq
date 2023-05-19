@@ -5,7 +5,6 @@ class Music
 
   def tracklist
     return @tracks
-      
   end
 
   def add(tracks)
