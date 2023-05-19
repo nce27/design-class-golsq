@@ -15,7 +15,15 @@ RSpec.describe Music do
         music_tracks.add("Can't stop coding")
         expect(music_tracks.tracklist).to eq ["Can't stop coding"]
       end
+    end
 
+    context "when given two track" do
+      it "adds two tracks to the tracklist" do
+        music_tracks = Music.new
+        music_tracks.add("Can't stop coding")
+        music_tracks.add("Don't give up")
+        expect(music_tracks.tracklist).to eq ["Can't stop coding", "Don't give up"]
+      end
     end
   end
 end
