@@ -8,7 +8,7 @@ class Music
       
   end
 
-  def add(track)
-      
+  def add(tracks)
+      @tracks << tracks
   end
 end
