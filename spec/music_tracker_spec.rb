@@ -1,7 +1,7 @@
 require "music_tracker"
 
 RSpec.describe Music do
-  context "when given no tracks" do
+  context "when told to keep track of music listening" do
     it "creates an empty tracklist" do
       music_tracks = Music.new
       expect(music_tracks.tracklist).to eq []
@@ -26,9 +26,8 @@ RSpec.describe Music do
       end
     end
 
-
     context "when given more than two tracks" do
-      it "adds the tracks to the tracklist" do
+      it "returns the tracklist" do
         music_tracks = Music.new
         music_tracks.add("Can't stop coding")
         music_tracks.add("Don't give up")
@@ -37,7 +36,13 @@ RSpec.describe Music do
         expect(music_tracks.tracklist).to eq ["Can't stop coding", "Don't give up", "Consistency", "Object Orienation"]
       end
     end    
-
+    
+    # context "when given no tracks" do
+    #   it "fails" do
+    #     music_tracks = Music.new
+    #     expect { music_tracks("")}.to raise_error "No track given"
+    #   end
+    # end
   end
 end
 
