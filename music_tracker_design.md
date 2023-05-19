@@ -18,18 +18,16 @@ _Include the name of the class, the method, its parameters, return value, and si
 ```ruby
 
 class Music
-
-class Music
   def initialize
-      @track = [] #empty array for tracks
+      @tracks = [] #empty array for tracks
   end
 
-  def list
-      return @track #returns the array track
+  def tracklist
+      return @tracks #returns the array track
   end
 
   def add(track)
-      @track << track #adds to the track array
+      @tracks << track #adds to the track array
   end
 end
 ```
@@ -40,8 +38,10 @@ _Make a list of examples of what the method will take and return._
 
 ```ruby
 
-# 1 - creates an empty
+# 1 - creates an empty tracklist
 music_tracks = Music.new
+expect(music_track.tracklist).to eq []
+
 music_tracks.tracklist # => []
 
 # 2 - test responsible for adding a new track to the tracklist
