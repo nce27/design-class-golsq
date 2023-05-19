@@ -17,7 +17,7 @@ RSpec.describe Music do
       end
     end
 
-    context "when given two track" do
+    context "when given two tracks" do
       it "adds two tracks to the tracklist" do
         music_tracks = Music.new
         music_tracks.add("Can't stop coding")
@@ -25,6 +25,19 @@ RSpec.describe Music do
         expect(music_tracks.tracklist).to eq ["Can't stop coding", "Don't give up"]
       end
     end
+
+
+    context "when given more than two tracks" do
+      it "adds the tracks to the tracklist" do
+        music_tracks = Music.new
+        music_tracks.add("Can't stop coding")
+        music_tracks.add("Don't give up")
+        music_tracks.add("Consistency")
+        music_tracks.add("Object Orienation")
+        expect(music_tracks.tracklist).to eq ["Can't stop coding", "Don't give up", "Consistency", "Object Orienation"]
+      end
+    end    
+
   end
 end
 
