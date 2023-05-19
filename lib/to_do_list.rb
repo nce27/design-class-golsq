@@ -12,6 +12,12 @@ class TodoList
 
   end
 
+  def complete(task) #method responsible for completing & removing a task
+
+    @tasks.delete(task) # deletes the task that has been passed into the complete method from the array
+
+  end
+
   def list
 
     return @tasks
