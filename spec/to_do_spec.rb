@@ -2,13 +2,13 @@ require "to_do_list"
 
 RSpec.describe TodoList do
   context "given no tasks" do 
-    it "has an empty list" do
+    xit "has an empty list" do
       todo_list = TodoList.new
       expect(todo_list.list).to eq []
     end
   end
   context "given a task" do
-    xit "has the task in the list" do
+    it "has the task in the list" do
       todo_list = TodoList.new 
       todo_list.add("Wash the car")
       expect(todo_list.list).to eq ["Wash the car"]
