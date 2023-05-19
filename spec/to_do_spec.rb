@@ -24,8 +24,8 @@ RSpec.describe TodoList do
     end
   end
   
-  context "when we complete given tasks" do
-    xit "has two tasks in the list" do
+  context "when we complete a task" do
+    it "removes the task from the list" do
       todo_list = TodoList.new
       todo_list.add("Wash the car")
       todo_list.add("Wash the dog")
